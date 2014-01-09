@@ -33,6 +33,29 @@ set backspace=indent,eol,start    " backspace through everything in insert mode
 let ruby_space_errors=1
 let c_space_errors=1
 
+autocmd BufWritePre * :call <SID>StripWhite()
+fun! <SID>StripWhite()
+  %s/[ \t]\+$//ge
+  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+endfun
+
+
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+
+
+
+set cursorline
+set title
+set list
+set listchars=tab:>-,trail:-,nbsp:%
+set nohlsearch
+set term=screen-256color
+
 
 ""
 "" Searching
@@ -63,10 +86,10 @@ set autoindent            " use the indent of the previous line for a newly crea
 filetype plugin indent on " turn on filetype plugins (:help filetype-plugin)
 
 " use real tabs ...
-autocmd FileType make set noexpandtab
-autocmd FileType python set noexpandtab
-autocmd FileType c set noexpandtab
-autocmd FileType cpp set noexpandtab
+"autocmd FileType make set noexpandtab
+"autocmd FileType python set noexpandtab
+"autocmd FileType c set noexpandtab
+"autocmd FileType cpp set noexpandtab
 
 " Set the Ruby filetype for a number of common Ruby files without .rb
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
@@ -89,7 +112,7 @@ autocmd BufReadPost *
 "" Wild settings
 ""
 
-set wildmode=list:longest           " list all matches and complete till longest common string
+"set wildmode=list:longest           " list all matches and complete till longest common string
 
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
