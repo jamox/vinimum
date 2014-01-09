@@ -1,6 +1,7 @@
 ""
 "" Basic Setup
 ""
+let mapleader = ","
 
 set nocompatible                  " use vim, no vi defaults
 set history=50                    " keep 50 commands and 50 search patterns in the history
@@ -167,7 +168,9 @@ let g:rtfp_font = 'Consolas'
 if !has("gui_running")
   set t_Co=256
 endif
-colorscheme railscasts
+" I dont want railscasts...
+"colorscheme railscasts
+
 
 
 ""
@@ -225,3 +228,17 @@ vmap <C-Down> ]egv
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+
+" My own stuff
+
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+imap jj <Esc>
+
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized

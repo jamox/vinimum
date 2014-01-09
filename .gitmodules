@@ -161,3 +161,6 @@
 [submodule "langs/textile"]
 	path = langs/textile
 	url = https://github.com/timcharper/textile.vim.git
+[submodule "plugins/solarized"]
+	path = plugins/solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
