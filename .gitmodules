@@ -164,3 +164,12 @@
 [submodule "plugins/solarized"]
 	path = plugins/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "plugins/closetag"]
+	path = plugins/closetag
+	url = https://github.com/vim-scripts/closetag.vim.git
+[submodule "plugins/html5"]
+	path = plugins/html5
+	url = https://github.com/othree/html5.vim.git
+[submodule "plugins/delimitMate"]
+	path = plugins/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
