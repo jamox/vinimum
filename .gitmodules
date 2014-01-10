@@ -173,3 +173,6 @@
 [submodule "plugins/delimitMate"]
 	path = plugins/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "plugins/dmultipleCursors"]
+	path = plugins/dmultipleCursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
