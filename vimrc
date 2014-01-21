@@ -1,10 +1,13 @@
+nnoremap <silent> <leader><space> :nohlsearch<cr>:call clearmatches()<cr>
+
+
 ""
 "" Basic Setup
 ""
 let mapleader = ","
 
 set nocompatible                  " use vim, no vi defaults
-set history=50                    " keep 50 commands and 50 search patterns in the history
+set history=100                    " keep 50 commands and 50 search patterns in the history
 set ruler                         " show line and column number
 syntax on                         " turn on syntax highlighting allowing local overrides
 set encoding=utf-8                " set default encoding to UTF-8
@@ -84,6 +87,9 @@ endfunction
 set autoindent            " use the indent of the previous line for a newly created line
 
 filetype plugin indent on " turn on filetype plugins (:help filetype-plugin)
+
+
+inoremap <lt>/ </<C-X><C-O>
 
 " use real tabs ...
 "autocmd FileType make set noexpandtab
@@ -201,10 +207,18 @@ endif
 ""
 
 exe 'source ' . expand('~/.vim/') . 'core/pathogen/autoload/pathogen.vim'
+
+call pathogen#incubate()
+call pathogen#helptags()
+
 call pathogen#infect('indent/{}')
 call pathogen#infect('plugins/{}')
 call pathogen#infect('langs/{}')
+
+
+
 Helptags
+
 
 
 ""
