@@ -185,3 +185,6 @@
 [submodule "plugins/closetag.git"]
 	path = plugins/closetag.git
 	url = https://github.com/vim-scripts/closetag.vim.git
+[submodule "plugins/latex"]
+	path = plugins/latex
+	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex

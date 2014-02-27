@@ -6,6 +6,11 @@ nnoremap <silent> <leader><space> :nohlsearch<cr>:call clearmatches()<cr>
 ""
 let mapleader = ","
 
+" easier moving between tabs
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+
 set nocompatible                  " use vim, no vi defaults
 set history=100                    " keep 50 commands and 50 search patterns in the history
 set ruler                         " show line and column number
@@ -171,7 +176,7 @@ set statusline+=Column:%c\                   "Column
 ""
 
 let g:NERDTreeStatusline = ' '
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>b :NERDTreeToggle<CR>
 
 
 ""
@@ -268,6 +273,9 @@ endif
 
 
 " My own stuff
+
+map <Leader>l <c-]>
+map <Leader>k <c-T>
 
 map <c-j> <c-w>j
 map <c-k> <c-w>k
