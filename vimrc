@@ -287,3 +287,5 @@ imap jj <Esc>
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+cnoremap sudow w !sudo tee % >/dev/null
+

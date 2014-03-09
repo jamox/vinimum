@@ -188,3 +188,6 @@
 [submodule "plugins/latex"]
 	path = plugins/latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
+[submodule "plugins/emmet-vim"]
+	path = plugins/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
